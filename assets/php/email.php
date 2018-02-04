@@ -47,7 +47,7 @@ if( isset($_POST['message']) ){
 $headers = 'From: ' .$email . "\r\n";
 
 if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-mb_send_mail($to, $subject, $body, $headers);
+send($to, $subject, $body, $headers);
     echo '<div class="status-icon valid"><i class="fa fa-check"></i></div>';
 }
 else{
